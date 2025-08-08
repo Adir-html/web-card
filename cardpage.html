@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Cardpage</title>
+<meta charset="UTF-8">
+</head>
+<body>
+    <div id="Profilecard">card</div>
+    <h1>Adir</h1>
+    <h2>Shohat</h2>
+    <p>Hello, my name is Adir!</p>
+<ul>My hobbies</ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>Javascript</li>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPHDPq7UoNG5Xg_X6OsEJxkFCqks38x_kCtQ&s" alt="son-goku-adult" width="150px" height="80px" >
+<a href="https://www.youtube.com/watch?v=hm3L54YJPSs" target="_blank">Click here</a>
+<button id="name" onclick="changeText()">Click here</button>
+<button onclick="backgroundColor()">Tap here</button>
+
+
+
+<style>
+body {
+background-color: blueviolet;
+color: black;
+border-radius: 50px;
+font-size: large;
+text-align: center;
+transition: 0.5s ease;
+}
+h1 {
+background-color: aqua;
+color: black;
+font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+border: 1px;
+}
+h2 {
+    color: blue;
+}
+ul {
+color: blue;
+text-align: center;
+font-size: 10px;
+}
+li {
+text-align: center;
+border: 1px;
+color: blueviolet;
+}
+button {
+    margin-top: 10px;
+background-color: blue;
+color: black;
+font-family: Arial, sans-serif;
+text-align: start;
+border-top: 5px;
+padding: 5px;
+cursor: pointer;
+}
+</style>
+<script>
+function backgroundColor() {
+const colors = ["#FF5733", "#33FF57", "#3357FF", "#F333FF", "#FFD733"];
+const randomColor = colors[Math.floor(Math.random() * colors.length)];
+document.body.style.backgroundColor = randomColor;
+}
+
+function changeText() {
+const names = ["Adir","Profilecard"];
+const randomName = names[Math.floor(Math.random() * names.length)];
+document.getElementById("name").textContent = randomName;
+}
+</script>
+</body>
+</html>
