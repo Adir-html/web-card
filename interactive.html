@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Interactive Profile Card</title>
+<meta charset="UTF-8">
+<style>
+body {
+background-color: aqua;
+color: black;
+text-align: center;
+padding: 5px;
+border-radius: 15px;
+cursor: pointer;
+}
+h1 {
+text-align: center;
+color: black;
+}
+input {
+color: brown;
+text-align: end;
+cursor: pointer;
+font-family: Arial, Helvetica, sans-serif;
+}
+div {
+padding: 4px;
+border: 1px solid black;
+margin-top: 10px;
+}
+p {
+background-color: blueviolet;
+color: black;
+text-align: center;
+cursor: pointer;
+}
+button {
+background-color: brown;
+color: black;
+cursor: pointer;
+padding: 5px;
+text-align: center;
+}
+</style>
+</head>
+<body>
+    
+<div id="card" class="Profilecard">
+<h1>Adirs Profile Card</h1>
+
+<p>Hello,My name is Adir Shohat, i am 17 years old, from Israel.</p> 
+<button onclick="backgroundColor()">Click here</button>
+
+<form action="https://www.youtube.com/watch?v=NDoB_sDSuTM&t=260s" method="get" target="_blank">
+<label for="name">Name:</label>
+<input type="text" name="name" id="name" placeholder="Enter your name.">
+<label for="email">Email:</label>
+<input type="email" name="email" id="email" placeholder="Enter your email">
+<img src="https://i0.wp.com/tokyotreatblog.wpcomstaging.com/wp-content/uploads/2025/03/son-goku-adult.webp?fit=911%2C683&ssl=1" alt="Son goku" width="150" height="150" >
+<button type="submit">submit</button>
+</form>
+</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a> |
+  <a href="#contact">Contact</a>
+</nav>
+<script>
+function backgroundColor(){
+const colors = ["#FF5733", "#33FF57", "#3357FF", "#F333FF", "#FFD733"];
+const randomColor = colors[Math.floor(Math.random() * colors.length)];
+document.body.style.backgroundColor = randomColor;
+}
+
+
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+
+
+</html>
