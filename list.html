@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JS Mastery Playground</title>
+<style>
+  body { font-family: Arial; padding: 20px; }
+  input, button { padding: 5px; margin: 5px 0; }
+  .result { margin-top: 10px; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<h2>JS Mastery Playground</h2>
+
+<p>Add habits (comma separated, name:streak:goal:completed)</p>
+<input id="habitInput" placeholder="Drink water:3:7:true,Read:1:5:false">
+<br>
+
+<button onclick="showHabits()">Show All Habits</button>
+<button onclick="filterCompleted()">Show Completed</button>
+<button onclick="mapStreaks()">Double Streaks</button>
+<button onclick="findGoal()">Find First Goal >= 5</button>
+<button onclick="checkRead()">Check if Read exists</button>
+
+<ul id="habitList"></ul>
+
+<script>
+let habits = [];
+
+function parseHabits() {
+  const input = document.getElementById("habitInput").value;
+  if(!input) return;
+  habits = input.split(',').map(item => {
+    const [name, streak, goal, completed] = item.split(':');
+    return {
+      name,
+      streak: Number(streak),
+      goal: Number(goal),
+      completed: completed === 'true'
+    };
+  });
+}
+
+function displayArray(arr) {
+  const ul = document.getElementById("habitList");
+  ul.innerHTML = '';
+  arr.forEach(habit => {
+    const li = document.createElement("li");
+    li.textContent = `${habit.name} | Streak: ${habit.streak} | Goal: ${habit.goal} | Completed: ${habit.completed}`;
+    ul.appendChild(li);
+  });
+}
+
+// Buttons actions
+function showHabits() {
+  parseHabits();
+  displayArray(habits);
+}
+
+function filterCompleted() {
+  parseHabits();
+  const completed = habits.filter(h => h.completed);
+  displayArray(completed);
+}
+
+function mapStreaks() {
+  parseHabits();
+  const doubled = habits.map(h => ({...h, streak: h.streak*2}));
+  displayArray(doubled);
+}
+
+function findGoal() {
+  parseHabits();
+  const found = habits.find(h => h.goal >= 5);
+  alert(found ? `First habit with goal >=5: ${found.name}` : 'None found');
+}
+
+function checkRead() {
+  parseHabits();
+  const exists = habits.some(h => h.name.toLowerCase() === 'read');
+  alert(exists ? 'Read exists!' : 'Read not found');
+}
+</script>
+
+</body>
+</html>
+</html>
