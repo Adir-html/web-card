@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dog Image Fetcher</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        #loading { display: none; }
+        #error { color: red; }
+        img { max-width: 300px; display: block; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Dog Image Fetcher</h1>
+
+    <label for="breed">Choose a breed:</label>
+    <select id="breed">
+        <option value="">--Select a breed--</option>
+    </select>
+
+    <button id="fetchBtn">Fetch Dog</button>
+    <div id="loading">Loading...</div>
+    <div id="error"></div>
+    <img id="dogImg" src="" alt="Dog Image">
+
+    <script src="mathMore.js"></script>
+</body>
+</html>
