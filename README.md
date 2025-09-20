@@ -1,33 +1,26 @@
-# 👋 Hi, I'm Adir Shohat
+# Messages App (Phase 2 Fullstack Practice)
 
-💡 I'm 16.8 years old and working hard toward becoming a web developer.  
-💻 Learning HTML, CSS, and GitHub — coding every day and building real projects.  
-🚀 My goal: To join the tech industry as an apprentice or junior developer.  
-📚 Self-taught and motivated to grow fast by doing.
+A mini fullstack application built with React and Node/Express to practice core Phase 2 skills.
 
----
+## Features
+- Fetch messages from backend (GET /messages)
+- Add new messages (POST /messages)
+- Input validation (max 100 characters)
+- Filter important messages
+- Sort messages by time or sender
+- Reset filters
+- Live timestamps (dynamic "seconds ago")
+- Auto-scroll to newest message
+- Highlight new messages briefly
+- Dynamic styling for important messages
 
-## 🔧 Skills
-- ✅ HTML5
-- ✅ CSS3
-- ✅ Git & GitHub basics
-- 🧠 JavaScript (currently learning)
+## Technologies
+- React (useState, useEffect, useRef)
+- Node.js + Express backend
+- Axios for API calls
+- In-memory message storage
 
----
-
-## 📂 Projects
-
-- 🔹 [Web Card Project](https://github.com/Adir-html/web-card)  
-  A simple, styled profile card using HTML & CSS. One of my first real web projects!
-
----
-
-## 🌱 Currently Learning
-- Responsive design with CSS
-- JavaScript basics (DOM, events, functions)
-
----
-
-## 📫 Contact
-- 📧 Email: adirshohat1@gmail.com  
-- 🐙 GitHub: [github.com/Adir-html](https://github.com/Adir-html)
+## How to Run
+1. Clone the repo:
+```bash
+git clone <your-repo-url>
